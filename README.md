@@ -1,6 +1,6 @@
 # Swiping Cards
 
-![](https://github.com/LucasGPellegrini/swiping-cards/media/main.png)
+![](https://github.com/LucasGPellegrini/swiping-cards/blob/main/media/main.png)
 
 ## Description
 
@@ -16,11 +16,11 @@ This project is a front-end web development exercise created for studying purpos
 ## Demo
 
 
-![](https://github.com/LucasGPellegrini/swiping-cards/media/preview1.png)
+![](https://github.com/LucasGPellegrini/swiping-cards/blob/main/media/preview1.gif)
 
-![](https://github.com/LucasGPellegrini/swiping-cards/media/preview2.png)
+![](https://github.com/LucasGPellegrini/swiping-cards/blob/main/media/preview2.gif)
 
-![](https://github.com/LucasGPellegrini/swiping-cards/media/preview3.png)
+![](https://github.com/LucasGPellegrini/swiping-cards/blob/main/media/preview3.gif)
 
 ## Installation and Usage
 
