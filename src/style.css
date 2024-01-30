@@ -1,0 +1,241 @@
+body {
+    background-color: rgb(0, 0, 0);
+    margin: 0px;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.swiper {
+    aspect-ratio: 5/7;
+    margin-top: 8vmin;
+}
+
+.card,
+.deque, 
+.deque-group,
+.swiper,
+.buttons {
+    width: 30vmin;
+}
+
+.card, 
+.deque-group {
+    aspect-ratio: 5 / 7;
+}
+
+.deque-group {
+    position: absolute;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 1vmin;
+    position: absolute;
+    transition: transform 750ms cubic-bezier(.35,.76,.26,.94);
+}
+
+.deque[data-index="0"] > .card:nth-child(1) {
+    background-image: url('https://source.unsplash.com//gray-and-white-miniature-schnauzer-8g0D8ZfFXyA');
+    background-size: 100% 100%;
+    transform: translate(-16%, 2%) rotate(-4deg);
+}
+
+.deque[data-index="0"] > .card:nth-child(2) {
+    background-image: url('https://source.unsplash.com//white-and-brown-long-fur-cat-ZCHj_2lJP00');
+    background-size: 100% 100%;
+    transform: translateX(-4%) rotate(-2deg);
+}
+
+.deque[data-index="0"] > .card:nth-child(3) {
+    background-image: url('https://source.unsplash.com//white-cat-on-white-textile-BLW_KQ0Rkn0');
+    background-size: 100% 100%;
+    transform: translateX(4%) rotate(2deg);
+}
+
+.deque[data-index="0"] > .card:nth-child(4) {
+    background-image: url('https://source.unsplash.com//fawn-pembroke-welsh-corgi-sitting-on-orange-textile-9M0tSjb-cpA');
+    background-size: 100% 100%;
+    transform: translate(16%, 2%) rotate(4deg);
+}
+
+.deque[data-index="1"] > .card:nth-child(1) {
+    background-image: url('https://source.unsplash.com//white-and-brown-long-fur-cat-ZCHj_2lJP00');
+    background-size: 100% 100%;
+    transform: translate(-16%, 2%) rotate(-4deg);
+}
+
+.deque[data-index="1"] > .card:nth-child(2) {
+    background-image: url('https://source.unsplash.com//gray-and-white-miniature-schnauzer-8g0D8ZfFXyA');
+    background-size: 100% 100%;
+    transform: translateX(-4%) rotate(-2deg);
+}
+
+.deque[data-index="1"] > .card:nth-child(3) {
+    background-image: url('https://source.unsplash.com//fawn-pembroke-welsh-corgi-sitting-on-orange-textile-9M0tSjb-cpA');
+    background-size: 100% 100%;
+    transform: translateX(4%) rotate(2deg);
+}
+
+.deque[data-index="1"] > .card:nth-child(4) {
+    background-image: url('https://source.unsplash.com//white-cat-on-white-textile-BLW_KQ0Rkn0');
+    background-size: 100% 100%;
+    transform: translate(16%, 2%) rotate(4deg);
+}
+
+.deque[data-index="2"] > .card:nth-child(1) {
+    background-image: url('https://source.unsplash.com//white-cat-on-white-textile-BLW_KQ0Rkn0');
+    background-size: 100% 100%;
+    transform: translate(-16%, 2%) rotate(-4deg);
+}
+
+.deque[data-index="2"] > .card:nth-child(2) {
+    background-image: url('https://source.unsplash.com//gray-and-white-miniature-schnauzer-8g0D8ZfFXyA');
+    background-size: 100% 100%;
+    transform: translateX(-4%) rotate(-2deg);
+}
+
+.deque[data-index="2"] > .card:nth-child(3) {
+    background-image: url('https://source.unsplash.com//fawn-pembroke-welsh-corgi-sitting-on-orange-textile-9M0tSjb-cpA');
+    background-size: 100% 100%;
+    transform: translateX(4%) rotate(2deg);
+}
+
+.deque[data-index="2"] > .card:nth-child(4) {
+    background-image: url('https://source.unsplash.com//white-and-brown-long-fur-cat-ZCHj_2lJP00');
+    background-size: 100% 100%;
+    transform: translate(16%, 2%) rotate(4deg);
+}
+
+.deque {
+    transition: transform 400ms ease;
+}
+
+.deque:hover > .card:nth-child(1) {
+    transform: translate(-70%, 15%) rotate(-20deg);
+}
+
+.deque:hover > .card:nth-child(2) {
+    transform: translate(-17.5%, 3.75%) rotate(-5deg);
+}
+
+.deque:hover > .card:nth-child(3) {
+    transform: translate(17.5%, 3.75%) rotate(5deg);
+}
+
+.deque:hover > .card:nth-child(4) {
+    transform: translate(70%, 15%) rotate(20deg);
+}
+
+.deque[data-status="unknown"] {
+    transform: scale(0);
+}
+
+.deque[data-status="after"] {
+    transform: translateX(70%) rotate(30deg) scale(0);
+}
+
+.deque[data-status="becoming-active-left"] {
+    transform: translateX(-70%) scale(0);
+    transition: none;
+}
+
+.deque[data-status="before"] {
+    transform: translateX(-70%) rotate(-30deg) scale(0);
+}
+
+.deque[data-status="becoming-active-right"] {
+    transform: translateX(70%) scale(0);
+    transition: none;
+}
+
+.deque[data-status="active"] {
+    transition-delay: 200ms;
+}
+
+.deque[data-status="opened"] > .card:nth-child(1) {
+    transform: translateX(-180%);
+}
+.deque[data-status="closed"] > .card:nth-child(1) {
+    transform: translateX(-180%);
+}
+
+.deque[data-status="opened"] > .card:nth-child(2) {
+    transform: translateX(-60%);
+}
+.deque[data-status="closed"] > .card:nth-child(2) {
+    transform: translateX(60%);
+}
+
+.deque[data-status="opened"] > .card:nth-child(3) {
+    transform: translateX(60%);
+}
+.deque[data-status="closed"] > .card:nth-child(3) {
+    transform: translateX(-60%);
+}
+
+.deque[data-status="opened"] > .card:nth-child(4) {
+    transform: translateX(180%);
+}
+.deque[data-status="closed"] > .card:nth-child(4) {
+    transform: translateX(-180%);
+}
+
+.buttons {
+    margin-top: -8vmin;
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttons > button {
+    font-size: 2.5vmin;
+    border-radius: 100%;
+    border: 0.4vmin solid rgb(200, 200, 200);
+    background-color: transparent;
+    color: rgb(200, 200, 200);
+    height: 7vmin;
+    width: 7vmin;
+    cursor: pointer;
+}
+
+.buttons > button:hover {
+    font-size: 3.2vmin;
+}
+
+.buttons > button:active {
+    font-size: 3.5vmin;
+}
+
+#x-btn {
+    color: rgb(194, 32, 32);
+    border-color:  rgb(194, 32, 32);
+}
+
+#view-btn[data-class="plus"] {
+    color: rgb(17, 197, 110);
+    border-color:  rgb(17, 197, 110);
+}
+
+#view-btn[data-class="minus"] {
+    color: rgb(215, 226, 52);
+    border-color:  rgb(215, 226, 52);
+}
+
+#view-btn {
+    transition: transform 800ms cubic-bezier(.33,.71,.32,.97);
+}
+
+#view-btn:active {
+    transform: rotate(180deg);
+}
+
+
+#heart-btn {
+    color: rgb(33, 150, 243);
+    border-color: rgb(33, 150, 243);
+}
+
+footer {
+    color: white;
+    text-align: center;
+}

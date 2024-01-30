@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiping Cards</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="swiper">
+        <div class="deque-group">
+            <div class="deque" data-index="0" data-status="active">
+                <div class="card">
+                    
+                </div>
+                <div class="card">
+                    
+                </div>
+                <div class="card">
+                    
+                </div>
+                <div class="card">
+                    
+                </div>
+            </div>
+        
+            <div class="deque" data-index="1" data-status="unknown">
+                <div class="card">
+                    
+                </div>
+                <div class="card">
+                    
+                </div>
+                <div class="card">
+                    
+                </div>
+                <div class="card">
+                    
+                </div>
+            </div>
+        
+            <div class="deque" data-index="2" data-status="unknown">
+                <div class="card">
+                    
+                </div>
+                <div class="card">
+                    
+                </div>
+                <div class="card">
+                    
+                </div>
+                <div class="card">
+                    
+                </div>
+            </div>
+        </div>
+    </div class="swiper">
+   
+    <div class="buttons">
+        <button id="x-btn" onclick="handleXBtn()">
+            <i class="fa fa-times"></i>
+        </button>
+        <button id="view-btn" data-class="plus" onclick="handleViewBtn()">
+            <i id="view-btn-icon" class="fa fa-plus"></i>
+        </button>
+        <button id="heart-btn" onclick="handleHeartBtn()">
+            <i class="fa fa-heart"></i>
+        </button>
+    </div>
+    
+    <footer>
+        <p>&copy; Lucas Pellegrini</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
